@@ -78,3 +78,4 @@ selectedSessionsData.forEach((s,i,a)=>{
     printDlElement.appendChild(dd);
 });
 document.body.appendChild(printDlElement);
+window.print();
