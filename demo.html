@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,body,div { margin: 0; padding: 0; font: normal 16px/24px Helvetica Neue, Helvetica, sans-serif; color: #333; }
+      #main { max-width: 630px; margin: 3em auto; }
+      .bookmarklet { display: inline-block; padding: .5em 1em; color: #fff; background: #50dcf3; border-radius: 4px; text-decoration: none; }
+      a { color: #50dcf3; }
+      .dim { color: #999; }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Bookmarklet</h1>
+      <p>
+        Drag this button to your bookmarks bar to save it as a bookmarklet:
+      </p>
+      <p>
+        <a class="bookmarklet" href="javascript:(function()%7Blet%20selectedSessions%3D%5B...document.querySelectorAll('%5Bdata-type%3D%22remove_session%22%5D')%5D.map((e%3D%3Ee.closest(%22.js-agenda-section%2C.js-keynote-section%22)))%3Bconst%20sessionDay%3De%3D%3Ee%3Fe.classList.contains(%22agenda-2cc7f9fad51d%22)%3Fdocument.querySelector('%5Bfor%3D%22agenda-2cc7f9fad51d%22%5D').innerText.trim()%3Ae.classList.contains(%22agenda-30981362f7c6%22)%3Fdocument.querySelector('%5Bfor%3D%22agenda-30981362f7c6%22%5D').innerText.trim()%3A%22Unknown%20Day%22%3A%22Unknown%20Day%22%3Blet%20selectedSessionsData%3DselectedSessions.map((e%3D%3Ee%3F%7Bdate%3AsessionDay(e)%2Ctime%3Ae.querySelector(%22.bigmarker-cg-agenda-card-time%2C.bigmarker-cg-keynote-time%22).innerText.trim()%2Ctitle%3A(e.querySelector(%22.bigmarker-cg-agenda-card-titletime%20a%2C.bigmarker-cg-keynote-title-box%20a%2C.bigmarker-cg-keynote-more-title-box%20a%22)%3F%3F%7BinnerText%3A%22cant%20find%22%7D).innerText.trim()%7D%3Ae))%2CprintStyleElement%3Ddocument.querySelector(%22%23agenda-print-styles%22)%3BprintStyleElement%26%26document.head.removeChild(printStyleElement)%2CprintStyleElement%3Ddocument.createElement(%22style%22)%2CprintStyleElement.id%3D%22agenda-print-styles%22%2CprintStyleElement.innerHTML%3D%22%5Cn%20%20%20%20.js-print-dl%20%7B%5Cn%20%20%20%20%20%20%20%20display%3A%20none%3B%5Cn%20%20%20%20%7D%5Cn%20%20%20%20%40media%20print%20%7B%5Cn%20%20%20%20%20%20%20%20.js-agenda-list%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20none%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20.js-print-dl%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20block%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20.js-print-dt-date%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%201em%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20.js-print-dl%20dt%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20margin-top%3A%201em%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20.js-print-dl%20dd%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20font-weight%3A%20bold%3B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20margin-left%3A%201em%3B%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%22%2Cdocument.head.appendChild(printStyleElement)%3Blet%20printDlElement%3Ddocument.querySelector(%22.js-print-dl%22)%3BprintDlElement%26%26document.body.removeChild(printDlElement)%2CprintDlElement%3Ddocument.createElement(%22dl%22)%2CprintDlElement.classList.add(%22js-print-dl%22)%2CselectedSessionsData.forEach(((e%2Ct%2Cn)%3D%3E%7Bif(0%3D%3D%3Dt%7C%7Ct%3E0%26%26n%5Bt-1%5D.date!%3D%3De.date)%7Blet%20t%3Ddocument.createElement(%22dt%22)%3Bt.innerText%3De.date%2Ct.classList.add(%22js-print-dt-date%22)%3Blet%20n%3Ddocument.createElement(%22dd%22)%3Bn.appendChild(document.createElement(%22hr%22))%2CprintDlElement.appendChild(t)%2CprintDlElement.appendChild(n)%7Dlet%20l%3Ddocument.createElement(%22dt%22)%3Bl.innerText%3De.time%3Blet%20d%3Ddocument.createElement(%22dd%22)%3Bd.innerText%3De.title%2CprintDlElement.appendChild(l)%2CprintDlElement.appendChild(d)%7D))%2Cdocument.body.appendChild(printDlElement)%3B%7D)()">Bookmarklet</a>
+      </p>
+      
+      <p class="dim">This page was created with the <a href="https://github.com/mrcoles/bookmarklet">bookmarklet</a> npm library.</p>
+    </div>
+  </body>
+</html>

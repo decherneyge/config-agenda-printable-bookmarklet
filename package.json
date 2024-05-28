@@ -1,0 +1,27 @@
+{
+  "name": "config-agenda-printable-bookmarklet",
+  "version": "1.0.0",
+  "description": "A bookmarklet to inject a printable view of your selected schedule for config by figma",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "bookmarklet src/index.js demo.html -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decherneyge/config-agenda-printable-bookmarklet.git"
+  },
+  "keywords": [
+    "bookmarklet",
+    "figma",
+    "config"
+  ],
+  "author": "George DeCherney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/decherneyge/config-agenda-printable-bookmarklet/issues"
+  },
+  "homepage": "https://github.com/decherneyge/config-agenda-printable-bookmarklet#readme",
+  "dependencies": {
+    "bookmarklet": "^3.0.0"
+  }
+}
