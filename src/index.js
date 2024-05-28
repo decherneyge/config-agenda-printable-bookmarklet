@@ -1,3 +1,8 @@
+// ==Bookmarklet==
+// @name Print Figma:Config Agenda
+// @author George DeCherney
+// ==/Bookmarklet==
+
 //get all the selected sessions by selecting all the remove session buttons and then getting the closest agenda or keynote section
 let selectedSessions = [ ...document.querySelectorAll('[data-type="remove_session"]')]
     .map((b)=>b.closest('.js-agenda-section,.js-keynote-section'));
